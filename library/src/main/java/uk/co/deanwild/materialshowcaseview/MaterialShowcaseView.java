@@ -362,6 +362,10 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
         }
     }
 
+    private void setContentTextCenter(){
+        mContentTextView.setGravity(Gravity.CENTER_HORIZONTAL);
+    }
+
     private void setContentText(CharSequence contentText) {
         if (mContentTextView != null) {
             mContentTextView.setText(contentText);
@@ -599,6 +603,11 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
 
         public Builder setContentTextColor(int textColour) {
             showcaseView.setContentTextColor(textColour);
+            return this;
+        }
+
+        public Builder setContentTextCenter(){
+            showcaseView.setContentTextCenter();
             return this;
         }
 
