@@ -606,6 +606,12 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
             return this;
         }
 
+        public Builder setTitleVisibility(int visibility){
+            showcaseView.setTitleVisibility(visibility);
+            return this;
+        }
+
+
         public Builder setContentTextCenter(){
             showcaseView.setContentTextCenter();
             return this;
@@ -700,6 +706,10 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
             return showcaseView;
         }
 
+    }
+
+    private void setTitleVisibility(int visibility) {
+        mTitleTextView.setVisibility(visibility);
     }
 
     private void singleUse(String showcaseID) {
